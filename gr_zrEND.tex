@@ -1,0 +1,169 @@
+% ----------------------------------------------------------------------
+%  Pracovní úkoly - opište přímo ze zadání
+% ----------------------------------------------------------------------
+\section{Pracovní úkoly}
+
+\begin{enumerate}
+	
+	
+	\item Určete tíhové zrychlení a ověřte vztah pro rovnoměrně zrychlený pohyb.
+	
+\end{enumerate}
+
+% ----------------------------------------------------------------------
+%  Použité pomůcky
+% ----------------------------------------------------------------------
+
+
+\section{Použité přístroje a pomůcky}
+2 židle, stůl, ocelová kulička (průměr $1.58~cm$), mobil s fotoaparátem
+
+% ----------------------------------------------------------------------
+%  Teoretický úvod - vlastními slovy stručne popište fyzikální podstatu měření a uveďte základní vztahy použité ve vypracování
+% ----------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------
+%  Postup měření - vlastními slovy popište postup měření tak, aby bylo vaše měření reprodukovatelné 
+% ----------------------------------------------------------------------
+\section{Měření}
+Na stůl jsme dali židli a na ni postavili další. Vzali jsme pravítko a položili ho na sedadlo druhé židle. Pravítko přesahovalo mimo židli (abychom měli zachovanou výšku i kousek horizontálně od sedadla) tak, aby kulička při pádu nedopadla na spodní židli. Zapnuli jsme kameru, která snímala pracovní prostor. Přiložili jsme kuličku vedle pravítka a pustili ji. Tento postup jsme opakovali. Poté jsme sundali vrchní židli. Výška tedy byla rovna součtu výšce stolu a výšce sedadla spodní židle. Nakonec jsme postavili židli na zem a pouštěli kuličku z výšky sedadla židle. Ze zpomalených záběrů (video bylo pouštěno po jednotlivých snímcích) určili dobu pádu kuličky. 
+
+Zjednodušeně lze říci, že jsme kuličku pouštěli ze 4 různých výšek a vše natáčeli na kameru. 
+
+
+
+
+% ----------------------------------------------------------------------
+%  Naměřené hodnoty a samotné vypracování úkolu
+% ----------------------------------------------------------------------				
+\section{Vypracování}
+\subsection{Matematika}
+Rovnice \eqref{eq:1} slouží pro výpočet tíhového zrychlení.
+Pomocí rovnice \eqref{eq:2} určíme aritmetický průměr naměřených časů pro danou výšku a pomocí rovnice \eqref{eq:3} vypočteme střední kvadratickou chybu aritm. průměru.
+Ve vzorci \eqref{eq:7} je předpokládaná závislost dráhy na čase. Ze vzorce \eqref{eq:8} snadno vypočteme exponent, na který je čas umocněn. Tíhová zrychlení na jednotlivých úsecích dopočítáme dle \eqref{eq:1}, chyby dle \eqref{eq:4}. Výsledné tíhové zrychlení určíme dle \eqref{eq:5} a jeho střední kvadratickou chybu aritm. průměru dle \eqref{eq:6}.
+
+
+
+\begin{equation}\label{eq:1}
+	g = \frac{2s}{t^2}
+\end{equation}
+
+\begin{equation}\label{eq:2}
+	\bar{t} = \frac{\sum_{i}^{n} t_i}{n}
+\end{equation}
+
+\begin{equation}\label{eq:3}
+	\sigma_{t} = \sqrt{\frac{\sum_{i}^{n} (t_i-\bar{t})^2}{n \cdot (n-1)}}
+\end{equation}
+
+\begin{equation}\label{eq:4}
+	\sigma_{g} = \sqrt{{\left( \frac{\partial g}{\partial t}\right) }^{2}\sigma_{t}^{2}} = g \sqrt{{\left( \frac{2\sigma_{t}}{t}\right) }^{2}} = \sqrt{{\left( \frac{4s\cdot \sigma_{t}}{t^{3}}\right) }^{2}}
+\end{equation}
+\begin{equation}\label{eq:5}
+	\bar{g} = \frac{\sum_{i}^{n} p_i g_i}{\sum_{i}^{n} p_i},~kde~ p_i = \frac{1}{\sigma_{g_i}^{2}}
+\end{equation}
+\begin{equation}\label{eq:6}
+	\sigma = \sqrt{\frac{1}{\sum_{1}^{n}p_i}}
+\end{equation}
+\begin{equation}\label{eq:7}
+	s = C \cdot t^{n},  ~ n\in \mathbb{Z}, ~ C>0
+\end{equation}
+\begin{equation}\label{eq:8}
+	\frac{s_{1}}{s_{2}} = \frac{t_{1}^{n}}{t_{2}^{n}} \Leftrightarrow n = \frac{\log(\frac{s_{1}}{s_{2}})}{\log(\frac{t_{1}}{t_{2}})}
+\end{equation}
+
+
+\subsection{Naměřené hodnoty}
+Měření jsme zpracovali do následující Tabulky \ref{tab:table1}.
+Dráhu, kterou kulička urazila, jsme uvažovali konstantní tj. $s_{1} = 29.5 ~cm,~s_{2} = 48.5 ~cm,~s_{3} = 102.1~cm,~s_{4} = 150.5~cm$.
+Dráha $s_{1}$ odpovídá času $t_{1}$ atd.
+Dosazením naměřených hodnot do vzorců \eqref{eq:1}, \eqref{eq:2} a \eqref{eq:3}, dostaneme výsledná tíhová zrychlení s chybami. Uvedeno v tabulce \ref{tab:table1}.
+Pro grafické znázornění \ref{fig:pic} závislosti dráhy na čase jsou dopočítány průměrné časy s chybami.
+
+
+
+\begin{center}
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|S|S|S|S|S|}
+				\hline
+				{\#} & {$t_1[s]$} & {$t_2[s]$}  & {$t_3[s]$} & {$t_4[s]$} \\
+				\hline 
+				1 & 0.236 & 0.316&0.444 & 0.544\\
+				2 & 0.240 & 0.304&0.434& 0.536\\
+				3 & 0.252 & 0.308& 0.452& 0.540\\
+				4 &  0.236& 0.300 &0.436& 0.544\\
+				5&  0.248& 0.304 & 0.440& 0.540\\
+				6&  0.244 &0.300 & 0.452& 0.534\\
+				7&  0.240 & 0.308 & 0.452& 0.548\\
+				8&  0.238 & 0.312 & 0.444& 0.544\\
+				9&  0.240 & 0.308 & 0.432& 0.540\\
+				10&  0.232 & 0.316 & 0.440& 0.544\\
+				\hline
+				$\bar{t}[s]$&0.240 &0.308 &0.443 & 0.541\\
+				$\sigma_{t}[s]$& 0.001 &0.002 &0.002 & 0.001\\
+				\hline
+				\hline
+				$\bar{g} [m s^{-2}]$& 10.22&10.26 &10.43 &10.27 \\
+				$\sigma_{g}[m s^{-2}]$&0.10 & 0.12 &0.11 &0.05 \\
+				\hline
+			\end{tabular}
+			\caption{Tabulka hodnot časů a výsledných tíhových zrychlení}
+			\label{tab:table1}
+		\end{center}
+	\end{table}		
+\end{center}
+
+\begin{figure}[h]
+	\centering
+\vspace{0.2cm}
+	\includegraphics[keepaspectratio,width=15cm,height=15cm]{C:/Users/Petr/Desktop/grav/tihg_ZFM.eps}
+	\caption{Závislost dráhy na čase pro volný pád}
+	\label{fig:pic}
+\end{figure}
+\newpage
+\subsection{Výsledky}\label{pokus}
+Z naměřených dat nám vychází hodnota tíhového zrychlení:
+\begin{center}
+	\begin{Large}
+		$g = (10.28\pm 0.04) ~m \cdot s^{-2}$,
+	\end{Large}
+\end{center}
+
+Po dosazení do vztahu \eqref{eq:5} dostáváme $n \approx 1.9$ pro dráhy $s_{1} = 1,505~m $ a $s_{2} = 1,021~m $ a jim odpovídající časy . Pro dráhy  $s_{4} = 0,295~m $ a $s_{2} = 1,021~m $ a jim odpovídající časy $n \approx 2.13$. Odtud můžeme nahlédnout, že se jedná o kvadratickou závislost. Dominantní kvadratický člen v rovnici křivky na Obr. \ref{fig:pic} toto jen potvrzuje.
+% ----------------------------------------------------------------------
+%  Diskuse - obsahuje komentář k jednotlivým výsledkům, porovnání s očekáváním/tabulkovými hodnotami, zdroje především systematických chyb měření, návrh na zlepšení výsledků,...
+% ----------------------------------------------------------------------			
+
+
+\section{Diskuse}
+Při měření byl zanedbán odpor vzduchu. Odporová síla by se pohybyvala v řádu $10^{-3}$. Dále jsme uvažovali konstantní výšku pádu. Odtud by mohla vzniknout nějaká sys. chyba.
+
+Nedostatkem celého měření bylo, že kamera mobilu neměla nejlepší rozlišení. Bylo poměrně těžké určit, kdy byla kulička opravdu vypuštěna. Někdy se stalo, že kulička dopadla přesně mezi dvěma snímky. Tím pádem vzniká otázka, který snímek brát. Toto jsem řešil tak, že jsem vzal dobu přesně v polovině mezi snímky.
+
+Největším přínosem pro mne ovšem nebylo samotné měření, ale zopakování si tvorby grafů a práce v LateX editoru. 
+
+
+
+
+
+
+% ----------------------------------------------------------------------
+%  Závěr - stručně a jasně shrnout splněné cíle měření, úkoly a výsledky měření
+% ----------------------------------------------------------------------
+
+\section{Závěr}
+Předpoklad závislosti dráhy na druhé mocnině času se potvrdil. Z naměřených dat se podařilo určit tíhové zrychlení, jehož hodnota se oproti tabulkové hodnotě poměrně liší.
+Výsledné tíhové zrychlení je: \newline 
+\begin{center}
+	\begin{large}
+		$g = (10.28\pm 0.04) ~m\cdot s^{-2}$.
+	\end{large}
+	
+\end{center}
+
+
+
+
+

@@ -1,0 +1,156 @@
+% ----------------------------------------------------------------------
+%  Pracovní úkoly - opište přímo ze zadání
+% ----------------------------------------------------------------------
+\section{Pracovní úkoly}
+
+\begin{enumerate}
+
+
+\item Určete relativní permitivitu (dielektrickou konstantu) materiálu pomocí proložení změřené závislosti.
+
+\end{enumerate}
+
+% ----------------------------------------------------------------------
+%  Použité pomůcky
+% ----------------------------------------------------------------------
+
+
+\section{Použité přístroje a pomůcky}
+	Hliníková fólie, neznámý materiál, multimetr s možností měření kapacity, vodiče s krokosvorkami, posuvné měřidlo
+
+% ----------------------------------------------------------------------
+%  Teoretický úvod - vlastními slovy stručne popište fyzikální podstatu měření a uveďte základní vztahy použité ve vypracování
+% ----------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------
+%  Postup měření - vlastními slovy popište postup měření tak, aby bylo vaše měření reprodukovatelné 
+% ----------------------------------------------------------------------
+	\section{Měření}
+	Určili jsme tloušťku neznámého materiálu pomocí posuvného měřidla. Vytvořili jsme 2 čtverce z hliníkové fólie. Tyto 2 čtverce jsme dali z každé strany na neznámý materiál. Ke čtvercům jsme připojili krokosvorky s multimetrem. Změřili jsme kapacitu vzniklého kondenzátoru. Velikosti folií jsme poté měnili. 
+	
+	\subsection{Výsledky měření: }Výsledná tloušťka neznámého předmětu:  $d=(0.5\pm 0.01)mm$. Velikosti stran fólií v cm:  5, 10, 20, 30, 40, 50 a jim odpovídající výsledné kapacity v nanofaradech: 0.315,  0.912, 3.290,  11.141, 17.022, 25.118. Chyba měření kapacity je 20\% ze změřené hodnoty.
+
+					
+			
+% ----------------------------------------------------------------------
+%  Naměřené hodnoty a samotné vypracování úkolu
+% ----------------------------------------------------------------------				
+		\section{Vypracování}
+		\subsection{Matematika}
+		Rovnice \eqref{eq:1} slouží pro výpočet kapacity kondenzátoru. Pomocí rovnice \eqref{eq:2} vypočteme obsah čtverců z hliníkové fólie.
+		V rovnici \eqref{eq:3} provedeme substituci veličin C a d. V rovnici \eqref{eq:4} určíme chybu měření veličiny y. Dostaneme lineární rovnici \eqref{eq:5}, kde členy na levé straně nemají žádnou chybu měření. Určíme relativní permitivitu dle \eqref{eq:6}.
+		
+		\begin{equation}\label{eq:1}
+			C = \epsilon \frac{S}{d}
+		\end{equation}
+		
+		\begin{equation}\label{eq:2}
+		S_i = a_i^2
+		\end{equation}
+		
+		\begin{equation}\label{eq:3}
+			y_i = C_i d
+		\end{equation}
+			
+		
+	\begin{equation}\label{eq:4}
+	\sigma_{y_i} = y_i \sqrt{\left( \frac{\sigma_C}{C}\right) ^2 + \left( \frac{\sigma_d}{d}\right) ^2}
+	\end{equation}	
+\begin{equation}\label{eq:5}
+	y_i = \epsilon S_i
+\end{equation}
+\begin{equation}\label{eq:6}
+\epsilon_r = \frac{\epsilon}{\epsilon_0}
+\end{equation}
+
+		
+		\subsection{Naměřené hodnoty}
+Měření jsme zpracovali do následující Tabulky \ref{tab:table1}.
+Směrnice přímky na Obrázku \ref{fig:pic} udává permitivitu prostředí mezi deskami.
+		\begin{center}
+		
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|l|S|S|S|S|}
+	\hline
+				\# & $C[nF]$ & $S [cm^{2}]$& $y[nF \cdot m]$& $\sigma_{y_i}[nF \cdot m]$ \\
+\hline 
+				1 & 0.315 & 25& 0.016& 0.003\\
+				2 & 0.912 & 100& 0.046& 0.009\\
+				3 & 3.290 & 400& 0.165& 0.030\\
+4 &  11.141& 900& 0.557& 0.100\\
+ 5&  17.022& 1600& 0.850& 0.200\\
+ 6&  25.118 & 2500& 1.256& 0.300\\
+ \hline
+			\end{tabular}
+		\caption{Tabulka kapacit, obsahů a veličiny y s chybou}
+		\label{tab:table1}
+		\end{center}
+	\end{table}		
+	\end{center}
+
+
+
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[keepaspectratio,width=15cm,height=15cm]{img/permitivita_ZFM.eps}
+	\caption{Závislost hodnot y na obsahu desek}
+	\label{fig:pic}
+\end{figure}
+\newpage
+		\begin{center}
+	
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{|l|l|}
+				\hline
+				statistiky & hodnoty \\
+				\hline 
+				fitting method & leastsq \\
+				data points   &6\\
+				variables & 2 \\
+				chi-square&  2.705\\
+				reduced chi-square&  0.676\\
+				Akaike info crit&  -0.780 \\
+ A& $4.792 \cdot 10^{-11} \pm 4.012 \cdot 10^{-12}$\\
+B & $2.995 \cdot 10^{-14} \pm 2.872 \cdot 10^{-14}$\\
+				\hline
+			\end{tabular}
+			\caption{Statistiky grafu}
+			\label{tab:table2}
+		\end{center}
+	\end{table}		
+\end{center}
+Relativní permitivitu dostaneme z rovnice \eqref{eq:6}. Vydělíme hodnotu A z Tabulky \ref{tab:table2} permitivitou vakua.  
+
+
+
+
+% ----------------------------------------------------------------------
+%  Diskuse - obsahuje komentář k jednotlivým výsledkům, porovnání s očekáváním/tabulkovými hodnotami, zdroje především systematických chyb měření, návrh na zlepšení výsledků,...
+% ----------------------------------------------------------------------			
+	
+
+	\section{Diskuse}
+Na malé množství naměřených hodnot dostáváme poměrně slušný fit.
+I přesto jsou zde některé nepřesnosti. Hodnota relativní permitivity nejvíce odpovídá relativní permitivitě skla, která má hodnotu 4-8.   Dali by se zlepšit použitím profesionálnějších laboratorních pomůcek. Každopádně zpracování dat, které jsem snad nepokazil, bych viděl jako hlavní těžiště tohoto cvičení. 
+
+			
+
+		
+
+% ----------------------------------------------------------------------
+%  Závěr - stručně a jasně shrnout splněné cíle měření, úkoly a výsledky měření
+% ----------------------------------------------------------------------
+			
+\section{Závěr}
+		Výsledná relativní permitivita materiálu mezi deskami kondenzátoru je: \newline \begin{center}
+			$\epsilon_r =5.4 \pm 0.5$
+		\end{center}
+		
+	
+
+
+
